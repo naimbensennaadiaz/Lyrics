@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .titulo{
+            text-align: center;
+            color: rgb(255, 187, 0);
+
+        }
+        .presentacion{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .asterisco{
+            color: red;
+        }
+        .artista{
+            display: flex;
+            justify-content: baseline;
+        }
+
+        .cancion{
+            display: flex;
+            justify-content: baseline;
+        }
+        .buscador1{
+            background-color: rgb(169, 214, 214);
+            display: flex;
+            width: 100%;
+            height: 30px;
+            align-self: center;
+        }
+        .buscador2{
+            background-color: rgb(169, 214, 214);
+            display: flex;
+            width: 1000%;
+            height: 30px;
+            align-self: center;
+        }
+        .boton{
+            background-color: blue;
+            color: white;
+            width: 35%;
+            font-size: 200%;
+        }
+        button :hover{
+            box-shadow: yellow;
+        }
+        main{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        header .marquee{
+            display: flex;
+            justify-content: center;
+        }
+        header{display: flex; justify-content: center;}
+    </style>
+</head>
+<body>
+    <header>
+        <marquee
+        class="marquee"
+        direction="down"
+        width="250"
+        height="250"
+        behavior="alternate"
+        >
+        <marquee behavior="alternate"><h1 class="titulo">Lyrics APP</h1></marquee>
+      </marquee>
+    </header>
+    <main>
+        <div>
+            <div class="presentacion">
+                <h2>Búsqueda</h2>
+                <h2>Letra de la canción:</h2>
+                </div>
+            <div>
+                <p>Busca por artista y nombre:</p>
+                <p>*Obligatorio</p>
+            </div>
+            <div class="artista">
+                <H1 >ARTISTA:</H1>
+                <h1 class="asterisco">*</h1>
+                <input type="text" placeholder="Escribe aquí el artista" class="buscador1">
+            </div>
+            
+            <div class="cancion">
+                <H1>CANCIÓN:</H1>
+                <h1 class="asterisco">*</h1>
+                <input type="text" placeholder="Escribe aquí la canción" class="buscador2">
+            </div>
+            <button class="boton" id="boton-buscar">Cercar</button>
+        </div>
+        <div>
+            <h1 id="mostrar-cancion-artista"></h1>
+            <pre id="mostrar-letra"></pre>
+        </div>
+    </main>
+    <script src="lyrics.js"></script>
+</body>
+</html>
